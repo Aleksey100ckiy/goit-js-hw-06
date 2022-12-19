@@ -1,20 +1,35 @@
 
-const list = document.querySelector('#categories' );
-for ( const elem of list.children) {
-    console.log(`Number of categories: ${list.children.length}`)
-
-    
-}
-let firstCategory = document.querySelector('h2');
-firstCategory = firstCategory.firstChild.nodeValue; 
-console.log(`Category: ${firstCategory}`);
-let itemAnimal = document.querySelector('.item ul');
-itemAnimal = itemAnimal.children.length;
-console.log(`Elements: ${itemAnimal}`);
-// console.log(`Category: ${}`);
-// console.log(`Elements: ${}`);
-// console.log(`Category: ${}`);
-// console.log(`Elements: ${}`);
+const listMain = document.querySelector('#categories' );
+   
+console.log(`Number of categories: ${listMain.children.length}`)   
 
 
-// далі не соображу...
+let arrayHeaders = document.querySelectorAll('.item h2');
+
+for (let a of arrayHeaders){
+    console.log(`Category: ${a.textContent}`);
+
+};
+
+let arrayOfElements = document.querySelectorAll('ul li ul');
+
+
+
+for(let a of arrayOfElements){
+    console.log(`Elements: ${a.children.length}`);
+};
+// console.log(...finalArray);
+// console.log(a.textContent);
+
+// console.log(array);
+// let arrayHeaders = document.querySelectorAll('.item li');
+
+
+// let finalArray = [];
+// let finalObject = {
+//     Category: '',
+//     Elements: '',
+// };  
+
+// finalArray.push(a.textContent);
+    // finalOdject.category = a.textContent;

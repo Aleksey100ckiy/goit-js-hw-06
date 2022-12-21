@@ -6,15 +6,23 @@ function onSubmit (event) {
 
     event.preventDefault();
 
-const { email, password } = event.currentTarget.elements;
+    
 
+    
+    const { email, password } = event.currentTarget.elements;
 
+    const formData = new FormData(event.currentTarget);
 
-if( email.value !== '' || password.value !== ''){
+    if( email.value !== '' || password.value !== '') {
 
-console.log('email', email.value);
-console.log('password', password.value);
-inputForm.reset();
+    
+
+    formData.forEach((x, y) => {
+        console.log('Name :', y);
+        console.log('Value :', x);
+    });
+    
+    inputForm.reset();
 } else{
     alert('Bсі поля повинні бути заповнені.');
 }

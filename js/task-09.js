@@ -7,11 +7,15 @@ const buttonChange = document.querySelector('.change-color');
 const spanEl = document.querySelector('.color');
 const bodyEl = document.querySelector('body');
 
-
+// getRandomHexColor();
+// console.log(getRandomHexColor());
 buttonChange.addEventListener('klick', onClickButton);
-function onClickButton (getRandomHexColor){
-  getRandomHexColor();
+// let a = getRandomHexColor();
+// console.log(getRandomHexColor());
+
+function onClickButton () {
+  // getRandomHexColor();
   console.log(getRandomHexColor());
-  // bodyEl.style.backgroundColor = `${getRandomHexColor.value}`;
-  // spanEl.textContent = bodyEl.style.backgroundColor;
+  bodyEl.style.backgroundColor = `${getRandomHexColor().value}` ;
+  spanEl.textContent = getRandomHexColor();
 };

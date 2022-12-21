@@ -4,9 +4,15 @@ inputEl.addEventListener('blur', chechInputLength);
 
 function chechInputLength (){
     let userInput = `${inputEl.value}`;
-    if( userInput.length !== Number(inputEl.dataset.length) ){
-        return inputEl.classList.add('invalid')  
-    } else{
-        return inputEl.classList.add('valid');
+    if( userInput.length === Number(inputEl.dataset.length)){
+        inputEl.classList.remove('invalid');
+        inputEl.classList.add('valid');  
+        
+    } else {
+        inputEl.classList.remove('valid');
+        inputEl.classList.add('invalid')
+        
     };
+    
 };
+console.dir(inputEl);

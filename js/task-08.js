@@ -13,17 +13,20 @@ function onSubmit (event) {
 
     const formData = new FormData(event.currentTarget);
 
-    if( email.value !== '' || password.value !== '') {
+    if( email.value == '' || password.value == '') {
 
     
-
+   return alert('Bсі поля повинні бути заповнені.');
+    
+    } else{
     formData.forEach((x, y) => {
-        console.log('Name :', y);
-        console.log('Value :', x);
+    console.log({x, y});
     });
     
+    
+    
     inputForm.reset();
-} else{
-    alert('Bсі поля повинні бути заповнені.');
 }
 };
+  //     console.log('Name :', y);
+    //     console.log('Value :', x);

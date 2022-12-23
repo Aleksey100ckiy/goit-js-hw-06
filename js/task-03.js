@@ -33,12 +33,13 @@ const takeUlRef = document.querySelector('.gallery')
 //   });
 // };
 
-images.map(({url, alt}) =>
-takeUlRef.insertAdjacentHTML("beforeend", `<li>
+const imagesMap = images.map(({url, alt}) =>
+(`<li>
 <img class="item" src="${url}" alt="${alt}" width = 400>
 </li>`)
 ).join('');
-console.log(images);
+takeUlRef.insertAdjacentHTML("afterbegin", imagesMap);
+// console.log(imagesMap);
 
 
 

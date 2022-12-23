@@ -16,5 +16,5 @@ function onClickButton () {
   getRandomHexColor();
   console.log(getRandomHexColor());
   bodyEl.style.backgroundColor = getRandomHexColor();
-  spanEl.textContent = getRandomHexColor();
+  spanEl.textContent = bodyEl.style.backgroundColor;
 };
